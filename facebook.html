@@ -1,0 +1,27 @@
+<!-- this is a example of client side oauth for facebook -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faebook</title>
+</head>
+<body>
+
+    <a href="#" id="login-btn">Log in with Facebook</a>
+    <script type="text/javascript">
+        document.getElementById('login-btn').onclick = function() {
+          FB.login(function(response) {
+            Log.info('FB.login response', response);
+          });
+          return false;
+        }
+        </script>
+
+    <div class="fb-login-button" data-max-rows="1" data-size="medium" data-auto-logout-link="false"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</body>
+</html>
