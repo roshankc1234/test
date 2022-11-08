@@ -9,7 +9,17 @@
     <title>faebook</title>
 </head>
 <body>
-
+    <script>
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1274768263101300', // App ID
+      status     : false, 
+      version:  'v15.0',
+      cookie     : true, 
+      xfbml      : false  // parse XFBML
+    });
+};
+    </script>
     <a href="#" id="login-btn">Log in with Facebook</a>
     <script type="text/javascript">
             document.getElementById('login-btn').onclick = function() {
